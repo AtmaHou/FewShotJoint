@@ -1,0 +1,489 @@
+Parameter:
+ {
+  "input_path": "./data/SMP_Final_Origin2_3/",
+  "output_dir": "./result/SMP_data_slu_3/",
+  "dataset": "smp",
+  "episode_num": 50,
+  "test_episode_num": 5,
+  "support_shots": 3,
+  "query_shot": 4,
+  "way": -1,
+  "min_domain_size": 50,
+  "min_label_appear": 2,
+  "task": "slu",
+  "mark": "try",
+  "dup_query": false,
+  "allow_override": true,
+  "check": true,
+  "style": "fs",
+  "intent_as_domain": false,
+  "seed": 0,
+  "split_basis": "domain",
+  "eval_config": "D:/Data/Project/Data/MetaData/config/config0.json",
+  "eval_config_id": 0,
+  "label_type": "both",
+  "remove_rate": 80.0,
+  "use_fix_support": true
+}
+Start loading SMP (Chinese) data from:  ./data/SMP_Final_Origin2_3/
+all_files: ./data/SMP_Final_Origin2_3/train - ['./data/SMP_Final_Origin2_3/train/source.json']
+all data num: 5024 - ./data/SMP_Final_Origin2_3/train/source.json
+text before: ['今', '天', '适', '宜', '求', '医', '吗', '\xa0']
+text after: ['今', '天', '适', '宜', '求', '医', '吗']
+support data num: 29 - ./data/SMP_Final_Origin2_3/dev/support/support_4.json
+support data num: 8 - ./data/SMP_Final_Origin2_3/dev/support/support_3.json
+support data num: 15 - ./data/SMP_Final_Origin2_3/dev/support/support_2.json
+support data num: 7 - ./data/SMP_Final_Origin2_3/dev/support/support_1.json
+support data num: 7 - ./data/SMP_Final_Origin2_3/dev/support/support_0.json
+all data num: 93 - ./data/SMP_Final_Origin2_3/dev/correct/correct_0.json
+all data num: 93 - ./data/SMP_Final_Origin2_3/dev/correct/correct_1.json
+all data num: 121 - ./data/SMP_Final_Origin2_3/dev/correct/correct_4.json
+all data num: 113 - ./data/SMP_Final_Origin2_3/dev/correct/correct_2.json
+all data num: 91 - ./data/SMP_Final_Origin2_3/dev/correct/correct_3.json
+support data num: 10 - ./data/SMP_Final_Origin2_3/test/support/support_5.json
+support data num: 12 - ./data/SMP_Final_Origin2_3/test/support/support_4.json
+support data num: 20 - ./data/SMP_Final_Origin2_3/test/support/support_8.json
+support data num: 16 - ./data/SMP_Final_Origin2_3/test/support/support_3.json
+support data num: 24 - ./data/SMP_Final_Origin2_3/test/support/support_2.json
+support data num: 23 - ./data/SMP_Final_Origin2_3/test/support/support_1.json
+support data num: 15 - ./data/SMP_Final_Origin2_3/test/support/support_0.json
+support data num: 21 - ./data/SMP_Final_Origin2_3/test/support/support_7.json
+support data num: 6 - ./data/SMP_Final_Origin2_3/test/support/support_6.json
+all data num: 110 - ./data/SMP_Final_Origin2_3/test/correct/correct_0.json
+all data num: 152 - ./data/SMP_Final_Origin2_3/test/correct/correct_1.json
+all data num: 94 - ./data/SMP_Final_Origin2_3/test/correct/correct_6.json
+all data num: 118 - ./data/SMP_Final_Origin2_3/test/correct/correct_7.json
+all data num: 84 - ./data/SMP_Final_Origin2_3/test/correct/correct_4.json
+all data num: 105 - ./data/SMP_Final_Origin2_3/test/correct/correct_8.json
+all data num: 163 - ./data/SMP_Final_Origin2_3/test/correct/correct_5.json
+all data num: 126 - ./data/SMP_Final_Origin2_3/test/correct/correct_2.json
+all data num: 109 - ./data/SMP_Final_Origin2_3/test/correct/correct_3.json
+Start generate meta data.
+0 - labels: ['LAUNCH']
+0 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'B-name', 'I-name']
+0 - slu_labels: ['LAUNCH-O', 'LAUNCH-O', 'LAUNCH-O', 'LAUNCH-O', 'LAUNCH-O', 'LAUNCH-B-name', 'LAUNCH-I-name']
+1 - labels: ['LAUNCH']
+1 - seq_outs: ['O', 'O', 'B-name', 'I-name', 'I-name', 'I-name']
+1 - slu_labels: ['LAUNCH-O', 'LAUNCH-O', 'LAUNCH-B-name', 'LAUNCH-I-name', 'LAUNCH-I-name', 'LAUNCH-I-name']
+2 - labels: ['LAUNCH']
+2 - seq_outs: ['O', 'O', 'O', 'O', 'B-name', 'I-name']
+2 - slu_labels: ['LAUNCH-O', 'LAUNCH-O', 'LAUNCH-O', 'LAUNCH-O', 'LAUNCH-B-name', 'LAUNCH-I-name']
+	Domain: app 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+0 - slu_labels: ['QUERY', 'QUERY', 'QUERY', 'QUERY', 'QUERY', 'QUERY', 'QUERY', 'QUERY']
+1 - labels: ['QUERY']
+1 - seq_outs: ['O', 'O', 'B-startLoc_city', 'I-startLoc_city', 'O', 'B-endLoc_city', 'I-endLoc_city', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-B-startLoc_city', 'QUERY-I-startLoc_city', 'QUERY-O', 'QUERY-B-endLoc_city', 'QUERY-I-endLoc_city', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'B-startDate_date', 'I-startDate_date', 'O', 'B-endLoc_city', 'I-endLoc_city', 'O', 'O', 'O', 'O']
+2 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-startDate_date', 'QUERY-I-startDate_date', 'QUERY-O', 'QUERY-B-endLoc_city', 'QUERY-I-endLoc_city', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+	Domain: train 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['B-name', 'I-name', 'O', 'O', 'O', 'O', 'O', 'O']
+0 - slu_labels: ['QUERY-B-name', 'QUERY-I-name', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['B-name', 'I-name', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-B-name', 'QUERY-I-name', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['DIAL']
+2 - seq_outs: ['O', 'O', 'B-name', 'I-name']
+2 - slu_labels: ['DIAL-O', 'DIAL-O', 'DIAL-B-name', 'DIAL-I-name']
+	Domain: telephone 0 episodes finished
+0 - labels: ['SENDCONTACTS']
+0 - seq_outs: ['O', 'B-name', 'I-name', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-receiver', 'I-receiver', 'I-receiver']
+0 - slu_labels: ['SENDCONTACTS-O', 'SENDCONTACTS-B-name', 'SENDCONTACTS-I-name', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-B-receiver', 'SENDCONTACTS-I-receiver', 'SENDCONTACTS-I-receiver']
+1 - labels: ['SENDCONTACTS']
+1 - seq_outs: ['O', 'B-name', 'I-name', 'I-name', 'O', 'O', 'O', 'O', 'O', 'B-receiver', 'I-receiver']
+1 - slu_labels: ['SENDCONTACTS-O', 'SENDCONTACTS-B-name', 'SENDCONTACTS-I-name', 'SENDCONTACTS-I-name', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-B-receiver', 'SENDCONTACTS-I-receiver']
+2 - labels: ['SENDCONTACTS']
+2 - seq_outs: ['O', 'B-name', 'I-name', 'I-name', 'O', 'O', 'O', 'O', 'O', 'B-receiver', 'I-receiver', 'I-receiver']
+2 - slu_labels: ['SENDCONTACTS-O', 'SENDCONTACTS-B-name', 'SENDCONTACTS-I-name', 'SENDCONTACTS-I-name', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-O', 'SENDCONTACTS-B-receiver', 'SENDCONTACTS-I-receiver', 'SENDCONTACTS-I-receiver']
+	Domain: message 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['B-dishName', 'I-dishName', 'I-dishName', 'I-dishName', 'I-dishName', 'O', 'O', 'O']
+0 - slu_labels: ['QUERY-B-dishName', 'QUERY-I-dishName', 'QUERY-I-dishName', 'QUERY-I-dishName', 'QUERY-I-dishName', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['B-dishName', 'I-dishName', 'I-dishName', 'I-dishName', 'I-dishName', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-B-dishName', 'QUERY-I-dishName', 'QUERY-I-dishName', 'QUERY-I-dishName', 'QUERY-I-dishName', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['B-dishName', 'I-dishName', 'I-dishName', 'I-dishName']
+2 - slu_labels: ['QUERY-B-dishName', 'QUERY-I-dishName', 'QUERY-I-dishName', 'QUERY-I-dishName']
+	Domain: cookbook 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['B-datetime_date', 'I-datetime_date', 'B-datetime_time', 'I-datetime_time', 'O', 'O', 'O', 'B-name', 'I-name', 'I-name', 'I-name', 'I-name', 'O', 'O']
+0 - slu_labels: ['QUERY-B-datetime_date', 'QUERY-I-datetime_date', 'QUERY-B-datetime_time', 'QUERY-I-datetime_time', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-name', 'QUERY-I-name', 'QUERY-I-name', 'QUERY-I-name', 'QUERY-I-name', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['O', 'O', 'O', 'B-datetime_time', 'I-datetime_time', 'B-tvchannel', 'I-tvchannel', 'I-tvchannel', 'I-tvchannel', 'O', 'O', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-datetime_time', 'QUERY-I-datetime_time', 'QUERY-B-tvchannel', 'QUERY-I-tvchannel', 'QUERY-I-tvchannel', 'QUERY-I-tvchannel', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['B-datetime_time', 'I-datetime_time', 'O', 'O', 'O', 'B-category', 'I-category', 'O']
+2 - slu_labels: ['QUERY-B-datetime_time', 'QUERY-I-datetime_time', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-category', 'QUERY-I-category', 'QUERY-O']
+	Domain: epg 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['O', 'B-startLoc_city', 'I-startLoc_city', 'O', 'B-endLoc_city', 'I-endLoc_city', 'O', 'O', 'O', 'O']
+0 - slu_labels: ['QUERY-O', 'QUERY-B-startLoc_city', 'QUERY-I-startLoc_city', 'QUERY-O', 'QUERY-B-endLoc_city', 'QUERY-I-endLoc_city', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['B-startLoc_city', 'I-startLoc_city', 'O', 'B-endLoc_city', 'I-endLoc_city', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-B-startLoc_city', 'QUERY-I-startLoc_city', 'QUERY-O', 'QUERY-B-endLoc_city', 'QUERY-I-endLoc_city', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['B-startDate_date', 'I-startDate_date', 'O', 'B-endLoc_city', 'I-endLoc_city', 'O', 'O', 'O']
+2 - slu_labels: ['QUERY-B-startDate_date', 'QUERY-I-startDate_date', 'QUERY-O', 'QUERY-B-endLoc_city', 'QUERY-I-endLoc_city', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+	Domain: flight 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['B-keyword', 'I-keyword', 'O', 'O', 'O', 'O', 'O']
+0 - slu_labels: ['QUERY-B-keyword', 'QUERY-I-keyword', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['B-keyword', 'I-keyword', 'I-keyword', 'O', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-B-keyword', 'QUERY-I-keyword', 'QUERY-I-keyword', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['B-keyword', 'I-keyword', 'I-keyword', 'I-keyword', 'I-keyword', 'I-keyword', 'O']
+2 - slu_labels: ['QUERY-B-keyword', 'QUERY-I-keyword', 'QUERY-I-keyword', 'QUERY-I-keyword', 'QUERY-I-keyword', 'QUERY-I-keyword', 'QUERY-O']
+	Domain: health 0 episodes finished
+0 - labels: ['POSITION']
+0 - seq_outs: ['B-location_province', 'I-location_province', 'O', 'O', 'O']
+0 - slu_labels: ['POSITION-B-location_province', 'POSITION-I-location_province', 'POSITION-O', 'POSITION-O', 'POSITION-O']
+1 - labels: ['ROUTE']
+1 - seq_outs: ['O', 'B-startLoc_city', 'I-startLoc_city', 'I-startLoc_city', 'O', 'B-endLoc_province', 'I-endLoc_province', 'I-endLoc_province', 'B-endLoc_poi', 'I-endLoc_poi', 'I-endLoc_poi', 'I-endLoc_poi', 'I-endLoc_poi', 'O', 'O', 'O']
+1 - slu_labels: ['ROUTE-O', 'ROUTE-B-startLoc_city', 'ROUTE-I-startLoc_city', 'ROUTE-I-startLoc_city', 'ROUTE-O', 'ROUTE-B-endLoc_province', 'ROUTE-I-endLoc_province', 'ROUTE-I-endLoc_province', 'ROUTE-B-endLoc_poi', 'ROUTE-I-endLoc_poi', 'ROUTE-I-endLoc_poi', 'ROUTE-I-endLoc_poi', 'ROUTE-I-endLoc_poi', 'ROUTE-O', 'ROUTE-O', 'ROUTE-O']
+2 - labels: ['POSITION']
+2 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'B-location_area', 'I-location_area', 'O', 'O', 'O', 'O', 'O']
+2 - slu_labels: ['POSITION-O', 'POSITION-O', 'POSITION-O', 'POSITION-O', 'POSITION-O', 'POSITION-B-location_area', 'POSITION-I-location_area', 'POSITION-O', 'POSITION-O', 'POSITION-O', 'POSITION-O', 'POSITION-O']
+	Domain: map 0 episodes finished
+0 - labels: ['PLAY']
+0 - seq_outs: ['O', 'O', 'O', 'B-song', 'I-song', 'I-song', 'I-song', 'O', 'O', 'O']
+0 - slu_labels: ['PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-B-song', 'PLAY-I-song', 'PLAY-I-song', 'PLAY-I-song', 'PLAY-O', 'PLAY-O', 'PLAY-O']
+1 - labels: ['PLAY']
+1 - seq_outs: ['B-song', 'I-song', 'I-song', 'I-song', 'I-song', 'O', 'O', 'O']
+1 - slu_labels: ['PLAY-B-song', 'PLAY-I-song', 'PLAY-I-song', 'PLAY-I-song', 'PLAY-I-song', 'PLAY-O', 'PLAY-O', 'PLAY-O']
+2 - labels: ['PLAY']
+2 - seq_outs: ['O', 'O', 'O', 'O', 'B-song', 'I-song', 'I-song', 'O']
+2 - slu_labels: ['PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-B-song', 'PLAY-I-song', 'PLAY-I-song', 'PLAY-O']
+	Domain: music 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['O', 'O', 'O', 'B-dynasty', 'O', 'O', 'O', 'O', 'O', 'O']
+0 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-dynasty', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['O', 'O', 'O', 'B-author', 'I-author', 'I-author', 'O', 'O']
+1 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-author', 'QUERY-I-author', 'QUERY-I-author', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['O', 'O', 'O', 'B-author', 'I-author', 'I-author', 'O', 'O']
+2 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-author', 'QUERY-I-author', 'QUERY-I-author', 'QUERY-O', 'QUERY-O']
+	Domain: poetry 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['B-name', 'I-name', 'I-name', 'I-name', 'O', 'O']
+0 - slu_labels: ['QUERY-B-name', 'QUERY-I-name', 'QUERY-I-name', 'QUERY-I-name', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['B-name', 'I-name', 'I-name', 'I-name', 'O', 'O']
+1 - slu_labels: ['QUERY-B-name', 'QUERY-I-name', 'QUERY-I-name', 'QUERY-I-name', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['B-name', 'I-name', 'I-name', 'I-name', 'O', 'O']
+2 - slu_labels: ['QUERY-B-name', 'QUERY-I-name', 'QUERY-I-name', 'QUERY-I-name', 'QUERY-O', 'QUERY-O']
+	Domain: stock 0 episodes finished
+0 - labels: ['TRANSLATION']
+0 - seq_outs: ['B-content', 'I-content', 'I-content', 'I-content', 'I-content', 'I-content', 'I-content', 'O', 'B-target', 'I-target', 'O']
+0 - slu_labels: ['TRANSLATION-B-content', 'TRANSLATION-I-content', 'TRANSLATION-I-content', 'TRANSLATION-I-content', 'TRANSLATION-I-content', 'TRANSLATION-I-content', 'TRANSLATION-I-content', 'TRANSLATION-O', 'TRANSLATION-B-target', 'TRANSLATION-I-target', 'TRANSLATION-O']
+1 - labels: ['TRANSLATION']
+1 - seq_outs: ['O', 'O', 'B-content', 'I-content', 'I-content', 'I-content']
+1 - slu_labels: ['TRANSLATION-O', 'TRANSLATION-O', 'TRANSLATION-B-content', 'TRANSLATION-I-content', 'TRANSLATION-I-content', 'TRANSLATION-I-content']
+2 - labels: ['TRANSLATION']
+2 - seq_outs: ['O', 'O', 'B-content', 'I-content']
+2 - slu_labels: ['TRANSLATION-O', 'TRANSLATION-O', 'TRANSLATION-B-content', 'TRANSLATION-I-content']
+	Domain: translation 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['O', 'O', 'B-datetime_date', 'I-datetime_date', 'I-datetime_date', 'I-datetime_date', 'I-datetime_date', 'B-tag', 'I-tag', 'B-category', 'I-category']
+0 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-B-datetime_date', 'QUERY-I-datetime_date', 'QUERY-I-datetime_date', 'QUERY-I-datetime_date', 'QUERY-I-datetime_date', 'QUERY-B-tag', 'QUERY-I-tag', 'QUERY-B-category', 'QUERY-I-category']
+1 - labels: ['QUERY']
+1 - seq_outs: ['O', 'O', 'B-category', 'I-category', 'B-name', 'I-name']
+1 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-B-category', 'QUERY-I-category', 'QUERY-B-name', 'QUERY-I-name']
+2 - labels: ['QUERY']
+2 - seq_outs: ['B-artist', 'I-artist', 'I-artist', 'O', 'B-name', 'I-name', 'I-name']
+2 - slu_labels: ['QUERY-B-artist', 'QUERY-I-artist', 'QUERY-I-artist', 'QUERY-O', 'QUERY-B-name', 'QUERY-I-name', 'QUERY-I-name']
+	Domain: video 0 episodes finished
+0 - labels: ['OPEN']
+0 - seq_outs: ['O', 'O', 'B-name', 'I-name', 'I-name', 'I-name']
+0 - slu_labels: ['OPEN-O', 'OPEN-O', 'OPEN-B-name', 'OPEN-I-name', 'OPEN-I-name', 'OPEN-I-name']
+1 - labels: ['OPEN']
+1 - seq_outs: ['O', 'O', 'B-name', 'I-name', 'I-name', 'O', 'O']
+1 - slu_labels: ['OPEN-O', 'OPEN-O', 'OPEN-B-name', 'OPEN-I-name', 'OPEN-I-name', 'OPEN-O', 'OPEN-O']
+2 - labels: ['OPEN']
+2 - seq_outs: ['O', 'O', 'O', 'O', 'B-name', 'I-name']
+2 - slu_labels: ['OPEN-O', 'OPEN-O', 'OPEN-O', 'OPEN-O', 'OPEN-B-name', 'OPEN-I-name']
+	Domain: website 0 episodes finished
+0 - labels: ['QUERY_GROUP']
+0 - seq_outs: ['O', 'O', 'O', 'B-name', 'I-name', 'I-name']
+0 - slu_labels: ['QUERY_GROUP-O', 'QUERY_GROUP-O', 'QUERY_GROUP-O', 'QUERY_GROUP-B-name', 'QUERY_GROUP-I-name', 'QUERY_GROUP-I-name']
+1 - labels: ['QUERY_GROUP']
+1 - seq_outs: ['O', 'O', 'B-name', 'I-name', 'I-name', 'I-name', 'I-name']
+1 - slu_labels: ['QUERY_GROUP-O', 'QUERY_GROUP-O', 'QUERY_GROUP-B-name', 'QUERY_GROUP-I-name', 'QUERY_GROUP-I-name', 'QUERY_GROUP-I-name', 'QUERY_GROUP-I-name']
+2 - labels: ['QUERY_GROUP']
+2 - seq_outs: ['O', 'O', 'O', 'B-name', 'I-name', 'I-name', 'I-name']
+2 - slu_labels: ['QUERY_GROUP-O', 'QUERY_GROUP-O', 'QUERY_GROUP-O', 'QUERY_GROUP-B-name', 'QUERY_GROUP-I-name', 'QUERY_GROUP-I-name', 'QUERY_GROUP-I-name']
+	Domain: childClassics 0 episodes finished
+0 - labels: ['CREATE']
+0 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'B-name', 'I-name', 'B-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code']
+0 - slu_labels: ['CREATE-O', 'CREATE-O', 'CREATE-O', 'CREATE-O', 'CREATE-O', 'CREATE-B-name', 'CREATE-I-name', 'CREATE-B-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code']
+1 - labels: ['CREATE']
+1 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'B-name', 'I-name', 'B-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code']
+1 - slu_labels: ['CREATE-O', 'CREATE-O', 'CREATE-O', 'CREATE-O', 'CREATE-O', 'CREATE-B-name', 'CREATE-I-name', 'CREATE-B-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code']
+2 - labels: ['CREATE']
+2 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'B-name', 'I-name', 'I-name', 'B-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code', 'I-code']
+2 - slu_labels: ['CREATE-O', 'CREATE-O', 'CREATE-O', 'CREATE-O', 'CREATE-O', 'CREATE-B-name', 'CREATE-I-name', 'CREATE-I-name', 'CREATE-B-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code', 'CREATE-I-code']
+	Domain: contacts 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['B-datetime_date', 'I-datetime_date', 'O', 'O', 'O', 'O', 'O']
+0 - slu_labels: ['QUERY-B-datetime_date', 'QUERY-I-datetime_date', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['B-datetime_date', 'I-datetime_date', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-B-datetime_date', 'QUERY-I-datetime_date', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['O', 'O', 'O', 'B-datetime_date', 'I-datetime_date', 'O', 'O', 'O', 'O', 'O']
+2 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-datetime_date', 'QUERY-I-datetime_date', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+	Domain: calendar 0 episodes finished
+0 - labels: ['SET']
+0 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'B-attr', 'I-attr', 'O', 'O']
+0 - slu_labels: ['SET-O', 'SET-O', 'SET-O', 'SET-O', 'SET-O', 'SET-B-attr', 'SET-I-attr', 'SET-O', 'SET-O']
+1 - labels: ['SET']
+1 - seq_outs: ['O', 'O', 'O', 'B-attr', 'I-attr', 'I-attr', 'I-attr']
+1 - slu_labels: ['SET-O', 'SET-O', 'SET-O', 'SET-B-attr', 'SET-I-attr', 'SET-I-attr', 'SET-I-attr']
+2 - labels: ['SET']
+2 - seq_outs: ['O', 'B-attr', 'I-attr', 'O', 'O', 'B-attrValue', 'I-attrValue', 'I-attrValue']
+2 - slu_labels: ['SET-O', 'SET-B-attr', 'SET-I-attr', 'SET-O', 'SET-O', 'SET-B-attrValue', 'SET-I-attrValue', 'SET-I-attrValue']
+	Domain: airControl_smartHome 0 episodes finished
+0 - labels: ['SEND']
+0 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-name', 'I-name', 'O', 'O', 'O', 'B-content', 'I-content', 'I-content', 'I-content', 'I-content', 'I-content', 'I-content']
+0 - slu_labels: ['SEND-O', 'SEND-O', 'SEND-O', 'SEND-O', 'SEND-O', 'SEND-O', 'SEND-O', 'SEND-B-name', 'SEND-I-name', 'SEND-O', 'SEND-O', 'SEND-O', 'SEND-B-content', 'SEND-I-content', 'SEND-I-content', 'SEND-I-content', 'SEND-I-content', 'SEND-I-content', 'SEND-I-content']
+1 - labels: ['LAUNCH']
+1 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH']
+2 - labels: ['LAUNCH']
+2 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+2 - slu_labels: ['LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH', 'LAUNCH']
+	Domain: email 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['O', 'O', 'O', 'O', 'B-actor', 'I-actor', 'I-actor', 'O', 'O', 'O', 'B-name', 'I-name', 'I-name']
+0 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-actor', 'QUERY-I-actor', 'QUERY-I-actor', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-name', 'QUERY-I-name', 'QUERY-I-name']
+1 - labels: ['QUERY']
+1 - seq_outs: ['O', 'O', 'O', 'B-actor', 'I-actor', 'I-actor', 'O', 'B-name', 'I-name', 'I-name']
+1 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-actor', 'QUERY-I-actor', 'QUERY-I-actor', 'QUERY-O', 'QUERY-B-name', 'QUERY-I-name', 'QUERY-I-name']
+2 - labels: ['QUERY']
+2 - seq_outs: ['O', 'O', 'O', 'B-actor', 'I-actor', 'I-actor', 'B-keyword', 'I-keyword', 'I-keyword', 'I-keyword', 'O', 'O']
+2 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-actor', 'QUERY-I-actor', 'QUERY-I-actor', 'QUERY-B-keyword', 'QUERY-I-keyword', 'QUERY-I-keyword', 'QUERY-I-keyword', 'QUERY-O', 'QUERY-O']
+	Domain: crossTalk 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['B-category', 'I-category', 'I-category', 'I-category', 'I-category', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+0 - slu_labels: ['QUERY-B-category', 'QUERY-I-category', 'QUERY-I-category', 'QUERY-I-category', 'QUERY-I-category', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['B-category', 'I-category', 'I-category', 'I-category', 'I-category', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-B-category', 'QUERY-I-category', 'QUERY-I-category', 'QUERY-I-category', 'QUERY-I-category', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'B-company', 'I-company', 'I-company', 'O', 'B-datetime_date', 'I-datetime_date', 'O', 'O']
+2 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-company', 'QUERY-I-company', 'QUERY-I-company', 'QUERY-O', 'QUERY-B-datetime_date', 'QUERY-I-datetime_date', 'QUERY-O', 'QUERY-O']
+	Domain: petrolPrice 0 episodes finished
+Abandon labels: {'WAVE_QUERY-B-company', 'WAVE_QUERY-I-company'}
+Error: non-match label-set, 
+ excess: set(), 
+ lack: set()
+Abandon labels: {'WAVE_QUERY-B-company', 'WAVE_QUERY-I-company'}
+Error: non-match label-set, 
+ excess: set(), 
+ lack: set()
+Abandon labels: {'WAVE_QUERY-B-company', 'WAVE_QUERY-I-company'}
+Error: non-match label-set, 
+ excess: set(), 
+ lack: set()
+0 - labels: ['CONVERSION_WITH_NUMBER']
+0 - seq_outs: ['B-srcNumber', 'B-srcUnit', 'O', 'O', 'O', 'B-destUnit', 'I-destUnit']
+0 - slu_labels: ['CONVERSION_WITH_NUMBER-B-srcNumber', 'CONVERSION_WITH_NUMBER-B-srcUnit', 'CONVERSION_WITH_NUMBER-O', 'CONVERSION_WITH_NUMBER-O', 'CONVERSION_WITH_NUMBER-O', 'CONVERSION_WITH_NUMBER-B-destUnit', 'CONVERSION_WITH_NUMBER-I-destUnit']
+1 - labels: ['CONVERSION_WITH_NUMBER']
+1 - seq_outs: ['B-srcNumber', 'B-srcUnit', 'O', 'O', 'O', 'O', 'B-destUnit', 'I-destUnit']
+1 - slu_labels: ['CONVERSION_WITH_NUMBER-B-srcNumber', 'CONVERSION_WITH_NUMBER-B-srcUnit', 'CONVERSION_WITH_NUMBER-O', 'CONVERSION_WITH_NUMBER-O', 'CONVERSION_WITH_NUMBER-O', 'CONVERSION_WITH_NUMBER-O', 'CONVERSION_WITH_NUMBER-B-destUnit', 'CONVERSION_WITH_NUMBER-I-destUnit']
+2 - labels: ['CONVERSION_WITH_NUMBER']
+2 - seq_outs: ['B-srcNumber', 'B-srcUnit', 'O', 'O', 'O', 'O', 'O', 'O', 'B-destUnit', 'I-destUnit']
+2 - slu_labels: ['CONVERSION_WITH_NUMBER-B-srcNumber', 'CONVERSION_WITH_NUMBER-B-srcUnit', 'CONVERSION_WITH_NUMBER-O', 'CONVERSION_WITH_NUMBER-O', 'CONVERSION_WITH_NUMBER-O', 'CONVERSION_WITH_NUMBER-O', 'CONVERSION_WITH_NUMBER-O', 'CONVERSION_WITH_NUMBER-O', 'CONVERSION_WITH_NUMBER-B-destUnit', 'CONVERSION_WITH_NUMBER-I-destUnit']
+	Domain: weightScaler 0 episodes finished
+0 - labels: ['PROVINCE_CITY']
+0 - seq_outs: ['B-province', 'I-province', 'O', 'O', 'O', 'O', 'B-city', 'I-city', 'O']
+0 - slu_labels: ['PROVINCE_CITY-B-province', 'PROVINCE_CITY-I-province', 'PROVINCE_CITY-O', 'PROVINCE_CITY-O', 'PROVINCE_CITY-O', 'PROVINCE_CITY-O', 'PROVINCE_CITY-B-city', 'PROVINCE_CITY-I-city', 'PROVINCE_CITY-O']
+1 - labels: ['PROVINCE_CITY']
+1 - seq_outs: ['B-province', 'I-province', 'O', 'O', 'O', 'O', 'B-city', 'I-city', 'O']
+1 - slu_labels: ['PROVINCE_CITY-B-province', 'PROVINCE_CITY-I-province', 'PROVINCE_CITY-O', 'PROVINCE_CITY-O', 'PROVINCE_CITY-O', 'PROVINCE_CITY-O', 'PROVINCE_CITY-B-city', 'PROVINCE_CITY-I-city', 'PROVINCE_CITY-O']
+2 - labels: ['PROVINCE_CITY']
+2 - seq_outs: ['B-province', 'I-province', 'O', 'O', 'O', 'O', 'O', 'O', 'B-city', 'I-city']
+2 - slu_labels: ['PROVINCE_CITY-B-province', 'PROVINCE_CITY-I-province', 'PROVINCE_CITY-O', 'PROVINCE_CITY-O', 'PROVINCE_CITY-O', 'PROVINCE_CITY-O', 'PROVINCE_CITY-O', 'PROVINCE_CITY-O', 'PROVINCE_CITY-B-city', 'PROVINCE_CITY-I-city']
+	Domain: queryCapital 0 episodes finished
+0 - labels: ['HISTORY_DATE_QUERY']
+0 - seq_outs: ['O', 'O', 'O', 'O', 'B-datetime_date', 'I-datetime_date', 'I-datetime_date', 'I-datetime_date', 'O', 'O', 'O', 'O', 'O']
+0 - slu_labels: ['HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-B-datetime_date', 'HISTORY_DATE_QUERY-I-datetime_date', 'HISTORY_DATE_QUERY-I-datetime_date', 'HISTORY_DATE_QUERY-I-datetime_date', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O']
+1 - labels: ['HISTORY_DATE_QUERY']
+1 - seq_outs: ['O', 'O', 'O', 'O', 'B-datetime_date', 'I-datetime_date', 'I-datetime_date', 'I-datetime_date', 'O', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-B-datetime_date', 'HISTORY_DATE_QUERY-I-datetime_date', 'HISTORY_DATE_QUERY-I-datetime_date', 'HISTORY_DATE_QUERY-I-datetime_date', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O']
+2 - labels: ['HISTORY_DATE_QUERY']
+2 - seq_outs: ['O', 'O', 'O', 'O', 'B-datetime_date', 'I-datetime_date', 'I-datetime_date', 'I-datetime_date', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+2 - slu_labels: ['HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-B-datetime_date', 'HISTORY_DATE_QUERY-I-datetime_date', 'HISTORY_DATE_QUERY-I-datetime_date', 'HISTORY_DATE_QUERY-I-datetime_date', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O', 'HISTORY_DATE_QUERY-O']
+	Domain: historyToday 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['O', 'O', 'O', 'B-city', 'I-city', 'B-datetime_date', 'I-datetime_date', 'O', 'B-subfocus', 'I-subfocus', 'I-subfocus']
+0 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-city', 'QUERY-I-city', 'QUERY-B-datetime_date', 'QUERY-I-datetime_date', 'QUERY-O', 'QUERY-B-subfocus', 'QUERY-I-subfocus', 'QUERY-I-subfocus']
+1 - labels: ['QUERY']
+1 - seq_outs: ['O', 'O', 'O', 'B-datetime_date', 'I-datetime_date', 'O', 'B-subfocus', 'I-subfocus', 'I-subfocus', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-datetime_date', 'QUERY-I-datetime_date', 'QUERY-O', 'QUERY-B-subfocus', 'QUERY-I-subfocus', 'QUERY-I-subfocus', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['O', 'O', 'O', 'B-datetime_date', 'I-datetime_date', 'O', 'B-subfocus', 'I-subfocus', 'I-subfocus', 'I-subfocus']
+2 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-datetime_date', 'QUERY-I-datetime_date', 'QUERY-O', 'QUERY-B-subfocus', 'QUERY-I-subfocus', 'QUERY-I-subfocus', 'QUERY-I-subfocus']
+	Domain: weather 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['B-character', 'O', 'O', 'O']
+0 - slu_labels: ['QUERY-B-character', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['B-character', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-B-character', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['B-character', 'O', 'O', 'O']
+2 - slu_labels: ['QUERY-B-character', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+	Domain: stroke 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['B-datetime_date', 'I-datetime_date', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+0 - slu_labels: ['QUERY-B-datetime_date', 'QUERY-I-datetime_date', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['B-datetime_date', 'I-datetime_date', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-B-datetime_date', 'QUERY-I-datetime_date', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['B-datetime_date', 'I-datetime_date', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+2 - slu_labels: ['QUERY-B-datetime_date', 'QUERY-I-datetime_date', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+	Domain: carNumber 0 episodes finished
+0 - labels: ['DATE_QUERY']
+0 - seq_outs: ['B-film', 'I-film', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+0 - slu_labels: ['DATE_QUERY-B-film', 'DATE_QUERY-I-film', 'DATE_QUERY-O', 'DATE_QUERY-O', 'DATE_QUERY-O', 'DATE_QUERY-O', 'DATE_QUERY-O', 'DATE_QUERY-O', 'DATE_QUERY-O', 'DATE_QUERY-O', 'DATE_QUERY-O', 'DATE_QUERY-O', 'DATE_QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['B-film', 'I-film', 'I-film', 'I-film', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-B-film', 'QUERY-I-film', 'QUERY-I-film', 'QUERY-I-film', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['DESCRIPTION_QUERY']
+2 - seq_outs: ['B-film', 'I-film', 'I-film', 'I-film', 'I-film', 'O', 'O', 'O', 'O', 'O']
+2 - slu_labels: ['DESCRIPTION_QUERY-B-film', 'DESCRIPTION_QUERY-I-film', 'DESCRIPTION_QUERY-I-film', 'DESCRIPTION_QUERY-I-film', 'DESCRIPTION_QUERY-I-film', 'DESCRIPTION_QUERY-O', 'DESCRIPTION_QUERY-O', 'DESCRIPTION_QUERY-O', 'DESCRIPTION_QUERY-O', 'DESCRIPTION_QUERY-O']
+	Domain: cinemas 0 episodes finished
+0 - labels: ['ALL_FAMILY_NAMES']
+0 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+0 - slu_labels: ['ALL_FAMILY_NAMES', 'ALL_FAMILY_NAMES', 'ALL_FAMILY_NAMES', 'ALL_FAMILY_NAMES', 'ALL_FAMILY_NAMES', 'ALL_FAMILY_NAMES', 'ALL_FAMILY_NAMES', 'ALL_FAMILY_NAMES', 'ALL_FAMILY_NAMES', 'ALL_FAMILY_NAMES']
+1 - labels: ['ALLINFO_FAMILY_NAMES']
+1 - seq_outs: ['O', 'B-name', 'O', 'B-querytype', 'I-querytype', 'O', 'O']
+1 - slu_labels: ['ALLINFO_FAMILY_NAMES-O', 'ALLINFO_FAMILY_NAMES-B-name', 'ALLINFO_FAMILY_NAMES-O', 'ALLINFO_FAMILY_NAMES-B-querytype', 'ALLINFO_FAMILY_NAMES-I-querytype', 'ALLINFO_FAMILY_NAMES-O', 'ALLINFO_FAMILY_NAMES-O']
+2 - labels: ['ORDER_FAMILY_NAME']
+2 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'O', 'B-orderIndex', 'O', 'O', 'O']
+2 - slu_labels: ['ORDER_FAMILY_NAME-O', 'ORDER_FAMILY_NAME-O', 'ORDER_FAMILY_NAME-O', 'ORDER_FAMILY_NAME-O', 'ORDER_FAMILY_NAME-O', 'ORDER_FAMILY_NAME-O', 'ORDER_FAMILY_NAME-B-orderIndex', 'ORDER_FAMILY_NAME-O', 'ORDER_FAMILY_NAME-O', 'ORDER_FAMILY_NAME-O']
+	Domain: familyNames 0 episodes finished
+Abandon labels: {'ALLINFO_FAMILY_NAMES-I-name'}
+Error: non-match label-set, 
+ excess: set(), 
+ lack: set()
+Abandon labels: {'ALLINFO_FAMILY_NAMES-I-name'}
+Error: non-match label-set, 
+ excess: set(), 
+ lack: set()
+Abandon labels: {'ALLINFO_FAMILY_NAMES-I-name'}
+Error: non-match label-set, 
+ excess: set(), 
+ lack: set()
+Abandon labels: {'ALLINFO_FAMILY_NAMES-I-name'}
+Error: non-match label-set, 
+ excess: set(), 
+ lack: set()
+Abandon labels: {'ALLINFO_FAMILY_NAMES-I-name'}
+Error: non-match label-set, 
+ excess: set(), 
+ lack: set()
+0 - labels: ['PLAY']
+0 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'B-name', 'O']
+0 - slu_labels: ['PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-B-name', 'PLAY-O']
+1 - labels: ['PLAY']
+1 - seq_outs: ['B-name', 'I-name', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['PLAY-B-name', 'PLAY-I-name', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O']
+2 - labels: ['PLAY']
+2 - seq_outs: ['B-name', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+2 - slu_labels: ['PLAY-B-name', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O']
+	Domain: animalCries 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['O', 'O', 'O', 'B-keyword', 'I-keyword', 'O', 'O', 'O']
+0 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-keyword', 'QUERY-I-keyword', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['O', 'B-keyword', 'I-keyword', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-O', 'QUERY-B-keyword', 'QUERY-I-keyword', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'O', 'B-keyword', 'I-keyword', 'O', 'O', 'O']
+2 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-keyword', 'QUERY-I-keyword', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+	Domain: wordsMeaning 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-keyword', 'I-keyword', 'I-keyword', 'I-keyword', 'O', 'O']
+0 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-keyword', 'QUERY-I-keyword', 'QUERY-I-keyword', 'QUERY-I-keyword', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-keyword', 'I-keyword', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-keyword', 'QUERY-I-keyword', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-keyword', 'I-keyword', 'I-keyword', 'I-keyword', 'O', 'O', 'O', 'O']
+2 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-keyword', 'QUERY-I-keyword', 'QUERY-I-keyword', 'QUERY-I-keyword', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+	Domain: sentenceMaking 0 episodes finished
+0 - labels: ['QUERY']
+0 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'O', 'B-keyword', 'O', 'O']
+0 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-B-keyword', 'QUERY-O', 'QUERY-O']
+1 - labels: ['QUERY']
+1 - seq_outs: ['O', 'O', 'B-keyword', 'O', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-B-keyword', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O', 'QUERY-O']
+2 - labels: ['QUERY']
+2 - seq_outs: ['O', 'O', 'B-keyword', 'I-keyword']
+2 - slu_labels: ['QUERY-O', 'QUERY-O', 'QUERY-B-keyword', 'QUERY-I-keyword']
+	Domain: dream 0 episodes finished
+0 - labels: ['PLAY']
+0 - seq_outs: ['B-datetime_date', 'I-datetime_date', 'O', 'B-category', 'I-category', 'O', 'O']
+0 - slu_labels: ['PLAY-B-datetime_date', 'PLAY-I-datetime_date', 'PLAY-O', 'PLAY-B-category', 'PLAY-I-category', 'PLAY-O', 'PLAY-O']
+1 - labels: ['PLAY']
+1 - seq_outs: ['B-datetime_date', 'I-datetime_date', 'B-category', 'I-category', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['PLAY-B-datetime_date', 'PLAY-I-datetime_date', 'PLAY-B-category', 'PLAY-I-category', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O']
+2 - labels: ['PLAY']
+2 - seq_outs: ['O', 'O', 'O', 'O', 'B-category', 'I-category', 'O', 'B-datetime_date', 'I-datetime_date', 'O', 'O', 'O']
+2 - slu_labels: ['PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-B-category', 'PLAY-I-category', 'PLAY-O', 'PLAY-B-datetime_date', 'PLAY-I-datetime_date', 'PLAY-O', 'PLAY-O', 'PLAY-O']
+	Domain: new 0 episodes finished
+0 - labels: ['CITY_QUERY_ONE']
+0 - seq_outs: ['B-province', 'I-province', 'I-province', 'O', 'O', 'O', 'O', 'O']
+0 - slu_labels: ['CITY_QUERY_ONE-B-province', 'CITY_QUERY_ONE-I-province', 'CITY_QUERY_ONE-I-province', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O']
+1 - labels: ['CITY_QUERY_ONE']
+1 - seq_outs: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-province', 'I-province', 'I-province', 'O']
+1 - slu_labels: ['CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-B-province', 'CITY_QUERY_ONE-I-province', 'CITY_QUERY_ONE-I-province', 'CITY_QUERY_ONE-O']
+2 - labels: ['CITY_QUERY_ONE']
+2 - seq_outs: ['O', 'O', 'O', 'B-province', 'I-province', 'I-province', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+2 - slu_labels: ['CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-B-province', 'CITY_QUERY_ONE-I-province', 'CITY_QUERY_ONE-I-province', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O', 'CITY_QUERY_ONE-O']
+	Domain: cityOfPro 0 episodes finished
+0 - labels: ['PLAY']
+0 - seq_outs: ['B-name', 'I-name', 'I-name', 'I-name']
+0 - slu_labels: ['PLAY-B-name', 'PLAY-I-name', 'PLAY-I-name', 'PLAY-I-name']
+1 - labels: ['PLAY']
+1 - seq_outs: ['B-name', 'I-name', 'I-name', 'I-name', 'O', 'O', 'O', 'O']
+1 - slu_labels: ['PLAY-B-name', 'PLAY-I-name', 'PLAY-I-name', 'PLAY-I-name', 'PLAY-O', 'PLAY-O', 'PLAY-O', 'PLAY-O']
+2 - labels: ['PLAY']
+2 - seq_outs: ['B-name', 'I-name', 'I-name', 'I-name', 'O', 'O']
+2 - slu_labels: ['PLAY-B-name', 'PLAY-I-name', 'PLAY-I-name', 'PLAY-I-name', 'PLAY-O', 'PLAY-O']
+	Domain: tvchannel 0 episodes finished
+0 - labels: ['TURN_ON_LIGHT']
+0 - seq_outs: ['O', 'O', 'B-位置', 'I-位置', 'O', 'O', 'O', 'B-灯种', 'I-灯种', 'I-灯种']
+0 - slu_labels: ['TURN_ON_LIGHT-O', 'TURN_ON_LIGHT-O', 'TURN_ON_LIGHT-B-位置', 'TURN_ON_LIGHT-I-位置', 'TURN_ON_LIGHT-O', 'TURN_ON_LIGHT-O', 'TURN_ON_LIGHT-O', 'TURN_ON_LIGHT-B-灯种', 'TURN_ON_LIGHT-I-灯种', 'TURN_ON_LIGHT-I-灯种']
+1 - labels: ['TURN_ON_LIGHT']
+1 - seq_outs: ['O', 'O', 'B-位置', 'I-位置', 'O', 'B-灯种', 'I-灯种']
+1 - slu_labels: ['TURN_ON_LIGHT-O', 'TURN_ON_LIGHT-O', 'TURN_ON_LIGHT-B-位置', 'TURN_ON_LIGHT-I-位置', 'TURN_ON_LIGHT-O', 'TURN_ON_LIGHT-B-灯种', 'TURN_ON_LIGHT-I-灯种']
+2 - labels: ['TURN_ON_LIGHT']
+2 - seq_outs: ['O', 'O', 'B-位置', 'I-位置', 'O', 'B-灯种']
+2 - slu_labels: ['TURN_ON_LIGHT-O', 'TURN_ON_LIGHT-O', 'TURN_ON_LIGHT-B-位置', 'TURN_ON_LIGHT-I-位置', 'TURN_ON_LIGHT-O', 'TURN_ON_LIGHT-B-灯种']
+	Domain: home 0 episodes finished
+abandoned_domains: [['bus', 41], ['lottery', 31], ['match', 40], ['novel', 45], ['radio', 23], ['riddle', 45], ['clock', 30]]
+Train: Few_shot_data gathered and start to dump data
+Statistic of generated data
+statistic: {'app': {'ave_spt_shots': 3.08, 'ave_query_shots': 1.9607843137254901, 'ave_support_size': 9.24}, 'train': {'ave_spt_shots': 15.26, 'ave_query_shots': 4.0, 'ave_support_size': 15.26}, 'telephone': {'ave_spt_shots': 4.5, 'ave_query_shots': 2.4390243902439024, 'ave_support_size': 9.0}, 'message': {'ave_spt_shots': 4.3533333333333335, 'ave_query_shots': 2.0833333333333335, 'ave_support_size': 13.06}, 'cookbook': {'ave_spt_shots': 8.6, 'ave_query_shots': 4.0, 'ave_support_size': 8.6}, 'epg': {'ave_spt_shots': 6.05, 'ave_query_shots': 2.857142857142857, 'ave_support_size': 12.1}, 'flight': {'ave_spt_shots': 5.52, 'ave_query_shots': 4.0, 'ave_support_size': 5.52}, 'health': {'ave_spt_shots': 3.1, 'ave_query_shots': 4.0, 'ave_support_size': 3.1}, 'map': {'ave_spt_shots': 9.37, 'ave_query_shots': 2.3255813953488373, 'ave_support_size': 18.74}, 'music': {'ave_spt_shots': 8.21, 'ave_query_shots': 2.4390243902439024, 'ave_support_size': 16.42}, 'poetry': {'ave_spt_shots': 6.37, 'ave_query_shots': 2.857142857142857, 'ave_support_size': 12.74}, 'stock': {'ave_spt_shots': 5.3, 'ave_query_shots': 2.2222222222222223, 'ave_support_size': 15.9}, 'translation': {'ave_spt_shots': 3.24, 'ave_query_shots': 4.0, 'ave_support_size': 3.24}, 'video': {'ave_spt_shots': 19.1, 'ave_query_shots': 4.0, 'ave_support_size': 19.1}, 'website': {'ave_spt_shots': 6.2, 'ave_query_shots': 4.0, 'ave_support_size': 6.2}, 'childClassics': {'ave_spt_shots': 7.16, 'ave_query_shots': 2.1052631578947367, 'ave_support_size': 14.32}, 'contacts': {'ave_spt_shots': 3.01, 'ave_query_shots': 2.0618556701030926, 'ave_support_size': 6.02}, 'calendar': {'ave_spt_shots': 6.0, 'ave_query_shots': 4.0, 'ave_support_size': 6.0}, 'airControl_smartHome': {'ave_spt_shots': 10.48, 'ave_query_shots': 4.0, 'ave_support_size': 10.48}, 'email': {'ave_spt_shots': 4.8, 'ave_query_shots': 1.3333333333333333, 'ave_support_size': 24.0}, 'crossTalk': {'ave_spt_shots': 7.02, 'ave_query_shots': 4.0, 'ave_support_size': 7.02}, 'petrolPrice': {'ave_spt_shots': 5.49, 'ave_query_shots': 2.1052631578947367, 'ave_support_size': 10.98}, 'weightScaler': {'ave_spt_shots': 6.24, 'ave_query_shots': 2.127659574468085, 'ave_support_size': 12.48}, 'queryCapital': {'ave_spt_shots': 3.01, 'ave_query_shots': 1.2738853503184713, 'ave_support_size': 18.06}, 'historyToday': {'ave_spt_shots': 3.0, 'ave_query_shots': 2.1052631578947367, 'ave_support_size': 6.0}, 'weather': {'ave_spt_shots': 5.18, 'ave_query_shots': 4.0, 'ave_support_size': 5.18}, 'stroke': {'ave_spt_shots': 8.7, 'ave_query_shots': 4.0, 'ave_support_size': 8.7}, 'carNumber': {'ave_spt_shots': 12.68, 'ave_query_shots': 4.0, 'ave_support_size': 12.68}, 'cinemas': {'ave_spt_shots': 5.49, 'ave_query_shots': 1.492537313432836, 'ave_support_size': 21.96}, 'familyNames': {'ave_spt_shots': 4.065, 'ave_query_shots': 1.4814814814814814, 'ave_support_size': 16.26}, 'animalCries': {'ave_spt_shots': 3.46, 'ave_query_shots': 4.0, 'ave_support_size': 3.46}, 'wordsMeaning': {'ave_spt_shots': 3.0, 'ave_query_shots': 4.0, 'ave_support_size': 3.0}, 'sentenceMaking': {'ave_spt_shots': 6.0, 'ave_query_shots': 4.0, 'ave_support_size': 6.0}, 'dream': {'ave_spt_shots': 3.48, 'ave_query_shots': 4.0, 'ave_support_size': 3.48}, 'new': {'ave_spt_shots': 5.944, 'ave_query_shots': 1.9801980198019802, 'ave_support_size': 29.72}, 'cityOfPro': {'ave_spt_shots': 3.0, 'ave_query_shots': 1.492537313432836, 'ave_support_size': 12.0}, 'tvchannel': {'ave_spt_shots': 3.902857142857143, 'ave_query_shots': 1.408450704225352, 'ave_support_size': 27.32}, 'home': {'ave_spt_shots': 4.593333333333334, 'ave_query_shots': 1.6129032258064515, 'ave_support_size': 13.78}}
+
+Dev: Few_shot_data gathered and start to dump data
+Statistic of generated data
+statistic: {'garbageClassify': {'ave_spt_shots': 4.833333333333333, 'ave_query_shots': 20.166666666666668, 'ave_support_size': 29.0}, 'holiday': {'ave_spt_shots': 4.0, 'ave_query_shots': 45.5, 'ave_support_size': 8.0}, 'joke': {'ave_spt_shots': 3.75, 'ave_query_shots': 28.25, 'ave_support_size': 15.0}, 'wordFinding': {'ave_spt_shots': 3.5, 'ave_query_shots': 46.5, 'ave_support_size': 7.0}, 'temperature': {'ave_spt_shots': 3.5, 'ave_query_shots': 46.5, 'ave_support_size': 7.0}}
+
+Test: Few_shot_data gathered and start to dump data
+Statistic of generated data
+statistic: {'drama': {'ave_spt_shots': 10.0, 'ave_query_shots': 163.0, 'ave_support_size': 10.0}, 'timesTable': {'ave_spt_shots': 3.0, 'ave_query_shots': 21.0, 'ave_support_size': 12.0}, 'chineseZodiac': {'ave_spt_shots': 4.0, 'ave_query_shots': 21.0, 'ave_support_size': 20.0}, 'constellation': {'ave_spt_shots': 3.2, 'ave_query_shots': 21.8, 'ave_support_size': 16.0}, 'virusSearch': {'ave_spt_shots': 4.0, 'ave_query_shots': 21.0, 'ave_support_size': 24.0}, 'idiomsDict': {'ave_spt_shots': 3.2857142857142856, 'ave_query_shots': 21.714285714285715, 'ave_support_size': 23.0}, 'captialInfo': {'ave_spt_shots': 3.0, 'ave_query_shots': 22.0, 'ave_support_size': 15.0}, 'story': {'ave_spt_shots': 3.5, 'ave_query_shots': 19.666666666666668, 'ave_support_size': 21.0}, 'length': {'ave_spt_shots': 3.0, 'ave_query_shots': 47.0, 'ave_support_size': 6.0}}
+
+Dump data to dir:  ./result/SMP_data_slu_3/
+Output to: ./result/SMP_data_slu_3/smp.spt_s_3.q_s_4.ep_50.cross_id_0
+Process finished
