@@ -1,13 +1,11 @@
 # MetaSLU
 
-A exploration of multi-task learning framework in few-shot scene, which is the code of the paper 
+This project explores the joint learning of multi-task in the few-shot setting, which is the code of the paper 
 [Learning to Bridge Metric Spaces: Few-shot Joint Learning of Intent Detection and Slot Filling](https://arxiv.org/abs/2106.07343).
 
-We aim to the most common task in dialog system: **Spoken Language Understanding**, 
-which contains two task called **Intent Detection** and **Slot Filling**. 
+We conduct experiments with two most common tasks in dialog system (**Spoken Language Understanding**): 
+ **Intent Detection** and **Slot Filling**. 
 
-Those two task in highly related so a appropriate multi-task learning framework 
-can improve the performance of both tasks.
 
 ## Result
 
