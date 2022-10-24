@@ -47,7 +47,7 @@ We conduct experiments with two most common tasks in dialog system (**Spoken Lan
 |LD-Proto	|69.08	|34.53	|19.44|
 |LD-Proto + TR	|67.64	|45.20	|22.69|
 |ConProm (Ours)	|66.51	|39.07	|21.09|
-|ConProm+TR (Ours)	|75.13	|55.15	|32.54|
+|ConProm+TR (Ours)	|65.03	|47.66	|25.85|
 |JointTransfer	|45.22	|28.98	|14.79|
 
 
@@ -83,6 +83,8 @@ pytorch-nlp
 bert_base_uncased=/your_dir/chinese_L-12_H-768_A-12/
 bert_base_uncased_vocab=/your_dir/chinese_L-12_H-768_A-12/vocab.txt
 ```
+
+- NOTICE: FewJoint is a Chinese dataset, so you should choose `chinese_L-12_H-768_A-12` as your BERT. If you use another English dataset, you can choose `uncased_L-12_H-768_A-12` as your BERT.
 
 #### Step2: Prepare data
 - For snips, FewJoint1.0 and FewJoint1.1, you can get them in `data` here.
