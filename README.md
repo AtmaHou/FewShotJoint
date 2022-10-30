@@ -1,13 +1,14 @@
 # MetaSLU
 
-This project explores the joint learning of multi-task in the few-shot setting, which is the code of the paper 
-[Learning to Bridge Metric Spaces: Few-shot Joint Learning of Intent Detection and Slot Filling](https://arxiv.org/abs/2106.07343).
+This project explores the joint learning of multi-task in the few-shot setting, focus on the few-shot joint learning method in dialogue language understanding.
 
 We conduct experiments with two most common tasks in dialog system (**Spoken Language Understanding**): 
  **Intent Detection** and **Slot Filling**. 
 
 
 ## Result
+
+We report here the results for 1.0 and 1.1 versions of the FewJoint dataset. Please note that the 1.1 version of the dataset is only a fix for some bugs in the previous 1.0 dataset. You are welcome to use the **FewJoint 1.1** dataset in your future work.
 
 #### FewJoint1.0
 
